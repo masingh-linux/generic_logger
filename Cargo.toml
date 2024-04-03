@@ -1,7 +1,15 @@
 [package]
-name = "genric_logger"
+name = "generic_logger"
 version = "0.1.0"
+authors = ["Manisha Singh <masingh.linux@gmail.com>"]
 edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/masingh-linux/generic_logger"
+readme = "README.md" # It is used at https://crates.io/crates/publish
+description = "Logger for Rust applications"
+exclude = [
+    ".gitignore",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
