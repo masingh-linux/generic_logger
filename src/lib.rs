@@ -1,5 +1,5 @@
 #![allow(dead_code)]
-mod logger;
+pub mod logger;
 
 #[cfg(test)]
 mod tests {
