@@ -1,13 +1,13 @@
 #![allow(dead_code)]
+pub(crate) mod stdio_logger;
 pub mod logger;
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use logger::Logger;
     #[test]
     fn it_works() {
-        let my_logger = Logger::new(logger::LOG_LEVEL_DEBUG4);
+        let my_logger = logger::get_logger(logger::LOG_LEVEL_DEBUG4);
         println!("*************************************************************");
         my_logger.log_panic("panic...");
         my_logger.log_critical("critical....");
