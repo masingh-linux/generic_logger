@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 pub(crate) mod stdio_logger;
+pub(crate) mod fileio_logger;
 pub mod logger;
 
 #[cfg(test)]
@@ -7,7 +8,7 @@ mod tests {
     use super::*;
     #[test]
     fn it_works() {
-        let my_logger = logger::get_logger(logger::LOG_LEVEL_DEBUG4);
+        let mut my_logger = logger::get_logger_type(logger::LoggerType::FileIO,logger::LOG_LEVEL_DEBUG4);
         println!("*************************************************************");
         my_logger.log_panic("panic...");
         my_logger.log_critical("critical....");
